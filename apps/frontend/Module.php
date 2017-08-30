@@ -9,6 +9,7 @@ use Phalcon\Events\Manager;
 use Phalcon\Mvc\Dispatcher;
 use Phalcon\Db\Adapter\Pdo\Mysql;
 use Phalcon\Mvc\ModuleDefinitionInterface;
+use Phalcon\Mvc\Url;
 
 class Module implements ModuleDefinitionInterface
 {
@@ -38,6 +39,17 @@ class Module implements ModuleDefinitionInterface
      */
     public function registerServices(DiInterface $di)
     {
+	    $di->set(
+		    'url',
+		    function () {
+			    $url = new Url();
+
+			    $url->setBaseUri('/freems/');
+
+			    return $url;
+		    }
+	    );
+
         // Registering a dispatcher
         $di->set('dispatcher', function () {
             $dispatcher = new Dispatcher();
@@ -65,8 +77,8 @@ class Module implements ModuleDefinitionInterface
                 [
                     "host" => "localhost",
                     "username" => "root",
-                    "password" => "secret",
-                    "dbname" => "invo"
+                    "password" => "",
+                    "dbname" => "freems"
                 ]
             );
         });

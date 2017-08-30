@@ -15,6 +15,7 @@ $loader->registerDirs([
 ])->register();
 
 $loader->registerClasses([
-	'Services' => APP_PATH . 'app/Services.php',
-	'Helpers' => APP_PATH . 'app/library/Helpers.php'
+	'Services' => APP_PATH . 'app/library/services/Services.php',
+	'Plugins' => APP_PATH . 'app/library/plugins/Services.php',
+	'Helpers' => APP_PATH . 'app/library/helpers/Helpers.php'
 ]);

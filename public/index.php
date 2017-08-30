@@ -53,6 +53,8 @@ class Application extends BaseApplication {
 			return $router;
 		});
 
+
+
 		$this->setDI($di);
 	}
 

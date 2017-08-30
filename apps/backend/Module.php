@@ -58,8 +58,8 @@ class Module implements ModuleDefinitionInterface
                 [
                     "host" => "localhost",
                     "username" => "root",
-                    "password" => "secret",
-                    "dbname" => "invo"
+                    "password" => "",
+                    "dbname" => "freems"
                 ]
             );
         });

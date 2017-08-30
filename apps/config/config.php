@@ -12,7 +12,7 @@ return new Config([
 		'host' => 'localhost',
 		'username' => 'root',
 		'password' => '',
-		'dbname' => 'storage_database_sql',
+		'dbname' => 'freems',
 		'charset' => 'utf8',
 		'option' => array()
 	],
@@ -25,7 +25,7 @@ return new Config([
 		'viewsDir' => APP_PATH . '/views/',
 		'pluginsDir' => APP_PATH . '/plugins/',
 		'libraryDir' => APP_PATH . '/library/',
-		'helpersDir' => APP_PATH . '/library/',
+		'helpersDir' => APP_PATH . '/library/helpers/',
 		'cacheDir' => BASE_PATH . '/cache/',
 		'baseUri' => preg_replace('/public([\/\\\\])index.php$/', '', $_SERVER["PHP_SELF"]),
 		'formsDir' => APP_PATH . '/forms/',
