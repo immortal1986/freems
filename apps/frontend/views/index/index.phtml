@@ -1,79 +1,21 @@
 <div class="login-screen"></div>
 <div class="login-center">
-    <div class="container min-height" style="margin-top: 20px;">
+    <div id="size_25"></div>
+    <div class="container">
         <div class="row">
-            <div class="col-xs-4 col-md-offset-8">
+            <div class="col-md-4 col-md-offset-8">
                 <div class="login" id="card">
                     <div class="front signin_form">
                         <p>Авторизуйтесь</p>
-                        <form class="login-form">
-                            <div class="form-group">
-                                <div class="input-group">
-                                    <input type="email" class="form-control" placeholder="Email" autocomplete="off">
-                                    <span class="input-group-addon">
-                                          <i class="glyphicon glyphicon-user"></i>
-                                      </span>
-                                </div>
-                            </div>
-                            <div class="form-group">
-                                <div class="input-group">
-                                    <input type="password" class="form-control" placeholder="Password"
-                                           autocomplete="off">
-                                    <span class="input-group-addon">
-                                          <i class="glyphicon glyphicon-lock"></i>
-                                      </span>
-                                </div>
-                            </div>
-
-                            <div class="form-group sign-btn">
-                                <input type="submit" class="btn" value="Вход">
-                                <p><br><strong>Нету акаунта? </strong><a href="#" id="flip-btn"
-                                                                         class="signup signup_link">Зарегестрируйся</a>
-                                </p>
-                            </div>
-                        </form>
+                        <?php
+                            $this->view->partial('partial/login_form');
+                        ?>
                     </div>
                     <div class="back signup_form" style="opacity: 0;">
                         <p>Создание нового акаунта</p>
-                        <form class="login-form">
-                            <div class="form-group">
-                                <div class="input-group">
-                                    <input type="text" class="form-control" placeholder="Имя">
-                                    <span class="input-group-addon">
-                                          <i class="glyphicon glyphicon-user"></i>
-                                      </span>
-                                </div>
-                            </div>
-                            <div class="form-group">
-                                <div class="input-group">
-                                    <input type="password" class="form-control" placeholder="Пароль">
-                                    <span class="input-group-addon">
-                                          <i class="glyphicon glyphicon-lock"></i>
-                                    </span>
-                                </div>
-                            </div>
-                            <div class="form-group">
-                                <div class="input-group">
-                                    <input type="password" class="form-control" placeholder="Потвердить пароль">
-                                    <span class="input-group-addon">
-                                          <i class="glyphicon glyphicon-repeat"></i>
-                                    </span>
-                                </div>
-                            </div>
-                            <div class="form-group">
-                                <div class="input-group">
-                                    <input type="email" class="form-control" placeholder="Email">
-                                    <span class="input-group-addon">
-                                          <i class="glyphicon glyphicon-envelope"></i>
-                                      </span>
-                                </div>
-                            </div>
-                            <div class="form-group sign-btn">
-                                <input type="submit" class="btn" value="Зарегестрировать">
-                                <br><br>
-                                <p>Есть акаунт? <a href="#" id="unflip-btn" class="signup">Войти</a></p>
-                            </div>
-                        </form>
+	                    <?php
+	                        $this->view->partial('partial/register_form');
+	                    ?>
                     </div>
                 </div>
             </div>
