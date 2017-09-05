@@ -2,8 +2,9 @@
 
 namespace Multiple\Frontend\Controllers;
 
-use Forms\LoginForm;
-use Auth\Exception as AuthException;
+use Multiple\Frontend\Forms\LoginForm;
+use Multiple\Frontend\Forms\SignUpForm;
+use Multiple\Frontend\Auth\Exception as AuthException;
 
 class SessionController extends BaseController {
 
@@ -12,7 +13,7 @@ class SessionController extends BaseController {
 	}
 
 	public function loginAction() {
-		//$form = new LoginForm();
+		$form = new LoginForm();
 
 		try {
 			if (!$this->request->isPost()) {

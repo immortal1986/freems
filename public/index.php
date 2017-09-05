@@ -10,14 +10,13 @@ use Phalcon\Mvc\Application as BaseApplication;
 class Application extends BaseApplication {
 
 	protected function registerServices() {
-
 		$di = new FactoryDefault();
 
 		$loader = new Loader();
-
-		$loader
-			->registerDirs([__DIR__ . '/../apps/library/'])
-			->register();
+		$loader->registerDirs([__DIR__ . '/../apps/library'])->register();
+		$loader->registerClasses([
+			'Elements' => __DIR__ . '/../apps/frontend/library/Elements.php'
+		]);
 
 		// Registering a router
 		$di->set('router', function () {
@@ -31,38 +30,30 @@ class Application extends BaseApplication {
 				'controller' => 1,
 				'action' => 2,
 			])->setName('frontend');
-
 			$router->add("/login", [
 				'module' => 'backend',
 				'controller' => 'login',
 				'action' => 'index',
 			])->setName('backend-login');
-
 			$router->add("/admin/products/:action", [
 				'module' => 'backend',
 				'controller' => 'products',
 				'action' => 1,
 			])->setName('backend-product');
-
 			$router->add("/products/:action", [
 				'module' => 'frontend',
 				'controller' => 'products',
 				'action' => 1,
 			])->setName('frontend-product');
-
-			return $router;
+				return $router;
 		});
-
-
 
 		$this->setDI($di);
 	}
 
 	public function main() {
-
 		$this->registerServices();
 
-		// Register the installed modules
 		$this->registerModules([
 			'frontend' => [
 				'className' => 'Multiple\Frontend\Module',
@@ -73,6 +64,7 @@ class Application extends BaseApplication {
 				'path' => '../apps/backend/Module.php'
 			]
 		]);
+
 
 		echo $this->handle()->getContent();
 	}
