@@ -10,10 +10,24 @@ use Phalcon\Mvc\Application as BaseApplication;
 class Application extends BaseApplication {
 
 	protected function registerServices() {
+		/*Debug service*/
+		/*$config =  new \Phalcon\Config\Adapter\Php("../apps/config/config.php");
+		if ($config->appmode == 'development') {
+			$debug = new \Phalcon\Debug();
+			$debug->listen();
+		}*/
+
 		$di = new FactoryDefault();
 
 		$loader = new Loader();
-		$loader->registerDirs([__DIR__ . '/../apps/library'])->register();
+
+		$loader->registerDirs(
+			[
+				__DIR__ . '/../apps/library/',
+				__DIR__ . '/../apps/plugins/'
+			]
+		)->register();
+
 		$loader->registerClasses([
 			'Elements' => __DIR__ . '/../apps/frontend/library/Elements.php'
 		]);
@@ -45,7 +59,7 @@ class Application extends BaseApplication {
 				'controller' => 'products',
 				'action' => 1,
 			])->setName('frontend-product');
-				return $router;
+			return $router;
 		});
 
 		$this->setDI($di);
