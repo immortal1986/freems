@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<dataSource name="freems@localhost">
+  <database-model serializer="dbm" rdbms="MYSQL" format-version="4.2">
+    <root id="1"/>
+    <schema id="2" parent="1" name="freems">
+      <Current>1</Current>
+      <Visible>1</Visible>
+    </schema>
+    <schema id="3" parent="1" name="bestsignals"/>
+    <schema id="4" parent="1" name="chicks"/>
+    <schema id="5" parent="1" name="elem-cms"/>
+    <schema id="6" parent="1" name="emailtest"/>
+    <schema id="7" parent="1" name="fxtrade"/>
+    <schema id="8" parent="1" name="information_schema"/>
+    <schema id="9" parent="1" name="interactivepips"/>
+    <schema id="10" parent="1" name="invo"/>
+    <schema id="11" parent="1" name="kusach"/>
+    <schema id="12" parent="1" name="metal_company"/>
+    <schema id="13" parent="1" name="mysql"/>
+    <schema id="14" parent="1" name="nobel"/>
+    <schema id="15" parent="1" name="performance_schema"/>
+    <schema id="16" parent="1" name="phpmyadmin"/>
+    <schema id="17" parent="1" name="php_site"/>
+    <schema id="18" parent="1" name="public"/>
+    <schema id="19" parent="1" name="signal"/>
+    <schema id="20" parent="1" name="storage_database_sql"/>
+    <schema id="21" parent="1" name="test"/>
+    <schema id="22" parent="1" name="trader"/>
+    <schema id="23" parent="1" name="vokuro"/>
+    <schema id="24" parent="1" name="yona"/>
+    <table id="25" parent="2" name="users"/>
+    <table id="26" parent="2" name="users_admin"/>
+    <column id="27" parent="25" name="id">
+      <Position>1</Position>
+      <DataType>int(4)|0</DataType>
+      <NotNull>1</NotNull>
+      <SequenceIdentity>1</SequenceIdentity>
+    </column>
+    <column id="28" parent="25" name="email">
+      <Position>2</Position>
+      <DataType>char(50)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="29" parent="25" name="password">
+      <Position>3</Position>
+      <DataType>char(50)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="30" parent="25" name="role">
+      <Position>4</Position>
+      <DataType>char(10)|0</DataType>
+      <NotNull>1</NotNull>
+      <DefaultExpression>&apos;Users&apos;</DefaultExpression>
+    </column>
+    <column id="31" parent="25" name="user_id_info">
+      <Position>5</Position>
+      <DataType>int(4)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="32" parent="25" name="active">
+      <Position>6</Position>
+      <DataType>char(10)|0</DataType>
+      <NotNull>1</NotNull>
+      <DefaultExpression>&apos;N&apos;</DefaultExpression>
+    </column>
+    <key id="33" parent="25" name="PRIMARY">
+      <NameSurrogate>1</NameSurrogate>
+      <ColNames>id</ColNames>
+      <Primary>1</Primary>
+    </key>
+    <column id="34" parent="26" name="id">
+      <Position>1</Position>
+      <DataType>int(11)|0</DataType>
+      <NotNull>1</NotNull>
+      <SequenceIdentity>1</SequenceIdentity>
+    </column>
+    <column id="35" parent="26" name="email">
+      <Position>2</Position>
+      <DataType>varchar(255)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="36" parent="26" name="password">
+      <Position>3</Position>
+      <DataType>varchar(255)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <key id="37" parent="26" name="PRIMARY">
+      <NameSurrogate>1</NameSurrogate>
+      <ColNames>id</ColNames>
+      <Primary>1</Primary>
+    </key>
+  </database-model>
+</dataSource>

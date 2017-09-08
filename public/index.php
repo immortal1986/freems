@@ -29,7 +29,8 @@ class Application extends BaseApplication {
 		)->register();
 
 		$loader->registerClasses([
-			'Elements' => __DIR__ . '/../apps/frontend/library/Elements.php'
+			'Elements' => __DIR__ . '/../apps/frontend/library/Elements.php',
+			'CustomFlash' => __DIR__ . '/../apps/frontend/library/CustomFlash.php'
 		]);
 
 		// Registering a router

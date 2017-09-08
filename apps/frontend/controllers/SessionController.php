@@ -7,6 +7,7 @@ use Multiple\Frontend\Forms\SignUpForm;
 use Multiple\Frontend\Auth\Exception as AuthException;
 use Multiple\Frontend\Models\Users;
 
+
 class SessionController extends BaseController {
 
 	public function indexAction() {
@@ -26,7 +27,7 @@ class SessionController extends BaseController {
 	}
 
 	public function loginAction() {
-		$form = new LoginForm();
+	//	$form = new LoginForm();
 		try {
 			if ($this->request->isPost()) {
 
@@ -48,11 +49,6 @@ class SessionController extends BaseController {
 							)
 						)
 					);
-					echo '<pre>';
-					print_r($user);
-					echo '</pre>';
-					die(__LINE__);
-					//$this->view->disable();
 
 					if ($user) {
 						$this->_registerSession($user);

@@ -108,3 +108,7 @@ a:hover, a:focus {
     margin: 20px 0;
 }
 /* End Register/Login */
+.navbar.navbar-inverse{
+    position: relative;
+    z-index: 999;
+}

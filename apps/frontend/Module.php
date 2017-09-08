@@ -157,6 +157,10 @@ class Module implements ModuleDefinitionInterface {
 			return new Elements();
 		});
 
+		$di->set('customflash', function () {
+			return new CustomFlash();
+		});
+		
 		$di->set('flash', function () {
 			return new FlashSession(array(
 				'error' => 'alert alert-danger',

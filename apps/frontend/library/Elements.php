@@ -28,6 +28,10 @@ class Elements extends Component {
 				'caption' => 'Contact',
 				'action' => 'index'
 			),
+			'blog' => array(
+				'caption' => 'Blog',
+				'action' => 'index'
+			),
 		),
 		'navbar-right' => array(
 			'session' => array(
