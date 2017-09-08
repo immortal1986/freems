@@ -1,0 +1,147 @@
+.login-form{
+	max-width: 500px;
+	margin:  0 auto;
+}
+
+.btn_custom{
+	display: block;
+	margin:20px auto;
+	width: 100%;
+	max-width: 200px;
+	height: 40px;
+	font-size: 16px;
+	line-height: 28px;
+}
+
+.form_title{
+	text-align: center;
+	margin-bottom: 50px;
+}
+
+.login-form textarea{
+	width: 100%;
+	border-radius: 4px;
+	resize: none;
+	padding: 6px 12px;
+	border: 1px solid #ccc;
+	color: #555;
+	font-size: 14px;
+}
+
+.login-form textarea:focus{
+	border-color: #1b5a7c;
+    box-shadow: 0 1px 1px rgba(0, 0, 0, 0.075) inset, 0 0 8px rgba(24, 204, 162, 0.6);
+    outline: 0 none;
+}
+
+.alert{
+	display: inline-block;
+    position: fixed;
+    z-index: 999;
+    top: 70px;
+    right: 20px;
+    background: #63d8f1;
+    color: #fff;
+    border: 1px solid #63d8f1;
+}
+
+.sidebar-wrapper{
+	background: #080808 !important;
+}
+
+.nav .navbar-right li a{
+	cursor: pointer;
+}
+
+.navbar-nav{
+	margin: 0px -14px;
+}
+
+.form-group.sign-btn{
+	text-align: center;
+}
+
+.page-header{
+	text-align: center;
+}
+
+.navbar.navbar-default.navbar-inverse{
+	position: relative;
+	z-index:9999;
+}
+
+.navbar-brand{
+	margin-right: 10px
+}
+
+.login-form .input-group .input-group-addon .glyphicon{
+	color: #ddd
+}
+
+.signup.signup_link, .signup{
+	color: #fff;
+	text-decoration: underline !important;
+}
+
+.login .sign-btn input.btn{
+	display: block;
+	margin:20px auto;
+	width: 100%;
+	max-width: 200px;
+	height: 44px;
+	font-size: 16px;
+	line-height: 28px;
+}
+
+.form_wrapper{
+	margin: 150px auto 0px;
+    max-width: 320px;
+}
+
+.statistics{
+	display: flex;
+	justify-content: space-between;
+}
+
+.userContainer{
+	flex-basis: 30%;
+	margin:10px 15px;
+	background: #63d8f1;
+	min-height: 200px;
+	position: relative;
+}
+.userContainer span{
+	position: absolute;
+	top: 20px;
+	right: 20px;
+	font-size: 26px;
+	color: #fff;
+}
+
+.userResult{
+	position: absolute;
+	bottom: 40px;
+	left: 40px;
+	font-size: 50px;
+	color: #fff;
+	font-weight:bolder;
+}
+
+
+@media(max-width: 768px){
+	.nav.navbar-nav.navbar-left{
+		display: none;
+	}
+	.nav.navbar-nav li{
+		text-align: center;
+	}
+	.statistics{
+		flex-wrap: wrap;
+}
+	.userContainer{
+		flex-basis: 100%;
+	}
+}
+
+
+

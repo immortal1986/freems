@@ -8,6 +8,8 @@
 	<?= Tag::stylesheetLink('css/bootstrap.min.css') ?>
 	<?= Tag::stylesheetLink('css/font-awesome.min.css') ?>
 	<?= Tag::stylesheetLink('css/custom_template.css') ?>
+    <?= Tag::stylesheetLink('css/animate.min.css') ?>
+    <?= Tag::stylesheetLink('css/main.css') ?>
 </head>
 <body>
 <?= $this->getContent() ?>
@@ -15,5 +17,6 @@
 <?= Tag::javascriptInclude('js/bootstrap.js') ?>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jQuery-Flip/1.0.18/jquery.flip.js"></script>
 <?= Tag::javascriptInclude('js/custom_template.js') ?>
+<?= Tag::javascriptInclude('js/main.js') ?>
 </body>
 </html>

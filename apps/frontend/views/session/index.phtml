@@ -4,18 +4,23 @@
     <div id="size_25"></div>
     <div class="container">
         <div class="row">
-            <div class="col-md-5 col-md-offset-7">
-                <div class="login" id="card">
-                    <div class="front signin_form">
-						<?php
-						$this->view->partial('partial/login_form');
-						?>
-                    </div>
-                    <div class="back signup_form" style="opacity: 0;">
-                        <p>Создание нового акаунта</p>
-						<?php
-						$this->view->partial('partial/register_form');
-						?>
+            <div class="col-xs-12 col-sm-12 col-md-6">
+
+            </div>
+            <div class="col-xs-12 col-sm-12 col-md-6">
+                <div class="form_wrapper">
+                    <div class="login" id="card">
+                        <div class="front signin_form">
+                            <?php
+                            $this->view->partial('partial/login_form');
+                            ?>
+                        </div>
+                        <div class="back signup_form" style="opacity: 0;">
+                            <p>Создание нового акаунта</p>
+                            <?php
+                            $this->view->partial('partial/register_form');
+                            ?>
+                        </div>
                     </div>
                 </div>
             </div>

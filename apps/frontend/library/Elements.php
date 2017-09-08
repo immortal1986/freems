@@ -11,7 +11,7 @@ use Phalcon\Mvc\User\Component;
 class Elements extends Component {
 
 	private $_headerMenu = array(
-		'navbar-left' => array(
+		'navbar-left dropdown' => array(
 			'index' => array(
 				'caption' => 'Home',
 				'action' => 'index'

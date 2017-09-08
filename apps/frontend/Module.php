@@ -172,10 +172,10 @@ class Module implements ModuleDefinitionInterface {
 
 		$di->set('direct', function () {
 			return new DirectSession(array(
-				'error' => 'alert alert-danger',
-				'success' => 'alert alert-success',
-				'notice' => 'alert alert-info',
-				'warning' => 'alert alert-warning'
+				'error' => 'alert alert-danger animated fadeInDown',
+				'success' => 'alert alert-success animated fadeInDown',
+				'notice' => 'alert alert-info animated fadeInDown',
+				'warning' => 'alert alert-warning animated fadeInDown'
 			));
 		});
 
