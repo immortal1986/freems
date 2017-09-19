@@ -16,10 +16,19 @@ $( document ).ready(function() {
 			alert.removeClass('fadeInDown').addClass('fadeOutUp')
 		}
 	}
+	setTimeout(hide , 2000)
 
-	setTimeout(hide , 7000)
+
+// 	function remove() {
+//     $('div.alert').remove()
+// }
+// 	setTimeout(remove, 2000)
 
 });
+
+
+
+
 
 
 

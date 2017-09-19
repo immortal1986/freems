@@ -11,6 +11,10 @@
 	height: 40px;
 	font-size: 16px;
 	line-height: 28px;
+	user-select: none;
+}
+.btn_custom:focus{
+	background: transparent;
 }
 
 .form_title{
@@ -33,16 +37,35 @@
     box-shadow: 0 1px 1px rgba(0, 0, 0, 0.075) inset, 0 0 8px rgba(24, 204, 162, 0.6);
     outline: 0 none;
 }
-
 .alert{
 	display: inline-block;
-    position: fixed;
-    z-index: 999;
-    top: 70px;
-    right: 20px;
+	position: relative;
+	z-index: 999;
+	left: 0px;
+	top: 0px;
+	border: none
+}
+.innerWrapper{
+	padding-top:100px;
+}
+.alert-info{
     background: #63d8f1;
-    color: #fff;
-    border: 1px solid #63d8f1;
+	color: #fff;
+}
+
+.alert-danger{
+	background: #ff0000;;
+	color: #fff;
+}
+
+.alert-success{
+	background: #a1e82c;
+	color: #fff;
+}
+
+.alert-warning{
+	background: #FD871F;
+	color: #fff;
 }
 
 .sidebar-wrapper{
@@ -65,24 +88,50 @@
 	text-align: center;
 }
 
-.navbar.navbar-default.navbar-inverse{
-	position: relative;
+.customNavbar{
+	position: absolute;
+	top:0px;
+	/*left:50%;*/
+	/*transform: translate(-50%);*/
+	width:100%;
 	z-index:9999;
+	margin-bottom: 0px;
+	background: transparent;
+	/*border: none;*/
+	border-radius: 0px;
+	border-bottom: 1px solid rgba(255,255,255,0.6);
 }
-
+.customNavbar li a{
+	color: #fff;
+	text-transform: uppercase;
+	font-weight: bold;
+	padding: 30px 20px;
+	transition: color 0.3s ease;
+}
+.customNavbar li a:hover{
+	color: #ff0000;
+	background: transparent;
+}
+.customNavbar li a:focus{
+	background: transparent;
+}
 .navbar-brand{
-	margin-right: 10px
+	padding:29px 30px;
 }
 
 .login-form .input-group .input-group-addon .glyphicon{
 	color: #ddd
 }
-
+.navbar-toggle.collapsed{
+	background: #fff;
+}
+.navbar-toggle.collapsed span{
+	background: #333;
+}
 .signup.signup_link, .signup{
 	color: #fff;
 	text-decoration: underline !important;
 }
-
 .login .sign-btn input.btn{
 	display: block;
 	margin:20px auto;
@@ -91,6 +140,49 @@
 	height: 44px;
 	font-size: 16px;
 	line-height: 28px;
+	background: transparent;
+	border: 1px solid #fff
+}
+.page-header h2{
+	color: #fff;
+}
+.form_title{
+	color: #fff;
+}
+.login .sign-btn input.btn:hover{
+	background: transparent;
+	border: 1px solid #fff;
+	background: rgba(255,255,255,0.4);
+}
+.form-group input{
+	background: transparent;
+	border: 1px solid #fff;
+	color: #fff;
+	height: 44px;
+}
+.form-group textarea{
+	background: transparent;
+	border: 1px solid #fff;
+	color: #fff
+}
+.form-group input::-webkit-input-placeholder {color:#fff;}
+.form-group input::-moz-placeholder          {color:#fff;}/* Firefox 19+ */
+.form-group input:-moz-placeholder           {color:#fff;}/* Firefox 18- */
+.form-group input:-ms-input-placeholder      {color:#fff;}
+
+.form-group textarea::-webkit-input-placeholder{
+	color: #fff;
+}
+.btn_custom:hover{
+	background: transparent;
+	border: 1px solid #fff;
+	background: rgba(255,255,255,0.4);
+}
+
+
+.btn_custom:active{
+	background: transparent !important;
+	border: 1px solid #fff
 }
 
 .form_wrapper{
@@ -127,6 +219,19 @@
 	font-weight:bolder;
 }
 
+.login-screen{
+	background: url(../images/02.jpg)
+}
+
+.mainWrapper{
+	background: url(../images/01.jpg);
+	height: 100vh;
+}
+
+.jumbotron{
+	background: none;
+	color: #fff
+}
 
 @media(max-width: 768px){
 	.nav.navbar-nav.navbar-left{
@@ -140,6 +245,16 @@
 }
 	.userContainer{
 		flex-basis: 100%;
+	}
+	.navbar li a{
+		padding: 10px 20px;
+		color: #333
+	}
+	.navbar-brand {
+		padding: 15px 30px;
+	}
+	.customNavbar{
+		background: #fff
 	}
 }
 

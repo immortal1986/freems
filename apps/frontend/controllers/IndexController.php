@@ -15,7 +15,7 @@ class IndexController extends BaseController {
 		echo '</pre>';
 		die(__LINE__);*/
 		if (!$this->request->isPost()) {
-			$this->direct->notice('This is a sample application of the Phalcon Framework.
+			$this->direct->error('This is a sample application of the Phalcon Framework.
                 Please don\'t provide us any personal information. Thanks');
 		}
 	}
